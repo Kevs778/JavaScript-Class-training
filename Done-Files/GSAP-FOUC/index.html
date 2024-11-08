@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="ad.size" content="width=300,height=250">
+	<title>Burger Boy</title>
+	<meta name="robots" content="noindex">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=auto" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript">
+		var clickTag = "http://www.google.com";
+	</script>
+</head>
+<body>
+	<a href="javascript:void(window.open(clickTag))" id="banner">
+		<div id="panel1" class="panel">
+			<h1 id="panel1-text">hungry?</h1>
+		</div>
+		<div id="panel2" class="panel">
+			<h2 id="panel2-text">How about now?</h2>
+		</div>
+		<div id="panel3" class="panel">
+			<div id="info">
+				<h1>Burger Boy</h1>
+				<ul>
+					<li>Free Delivery</li>
+					<li>Open 24hrs</li>
+				</ul>
+				<div id="order-now">Order Now</div>
+			</div>
+		</div>
+	</a>
+
+	<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.11.5_min.js"></script>
+	<script>
+	function animate() {
+		let tl = gsap.timeline( {repeat:3, repeatDelay:2} );
+		tl
+		.set('#banner', {visibility:'visible'})
+		.from('#panel1-text', {duration:0.5, scale:0.5, opacity:0, ease:'back.out'})
+		.set('#panel2', {top:0}, '+=2')
+		.from('#panel2', {duration:0.2, opacity:0, scale:1.5})
+		.from('#panel2-text', {duration:0.2, yPercent:100}, '+=0.5')
+		.to('#panel2-text', {duration:0.2, yPercent:100}, '+=2')
+		.set('#panel3', {top:0}, 'final')
+		.from('#info', {duration:0.5, yPercent:100})
+		.to('#panel2', {duration:0.5, y:-65}, '<')
+		.from('#info li', {duration:0.3, opacity:0, x:50, stagger:0.1}, '+=0.2')
+		.from('#order-now', {duration:0.5, scale:0, opacity:0, ease:'back.out'})
+	}
+	window.addEventListener('load', animate);
+	</script>
+</body>
+</html>

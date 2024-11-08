@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>High Quality Sustainable Coffee Delivered to Your Door | Hipstirred</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Abel&family=Rancho&display=auto" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<header>
+		<a href="index.html"><img src="img/logo.svg" class="logo" alt="Hipstirred"></a>
+		<nav>
+			<ul>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="signup.html" class="button">Sign Up</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="hero">
+		<h1>Curated Coffee</h1>
+		<p class="tagline">A monthly subscription to sustainable coffees</p>
+	</div>
+
+	<main>
+		<h2>What Makes Hipstirred Coffee Great?</h2>
+
+		<section>
+			<div class="text" id="txt1">
+				<h3>High Quality</h3>
+				<p>Get top notch coffee that’s freshly&nbsp;roasted</p>
+			</div>
+			<img src="img/quality.jpg" alt="" id="img1">
+		</section>
+		<section>
+			<div class="text" id="txt2">
+				<h3>Convenient</h3>
+				<p>Amazing coffee delivered straight to your&nbsp;door</p>
+			</div>
+			<img src="img/convenient.jpg" alt="" id="img2">
+		</section>
+		<section>
+			<div class="text" id="txt3">
+				<h3>Affordable</h3>
+				<p>High-quality doesn’t have to have a high cost. We cut out the middleman to deliver great coffee at a
+					great&nbsp;price.</p>
+			</div>
+			<img src="img/affordable.jpg" alt="" id="img3">
+		</section>
+		<section>
+			<div class="text" id="txt4">
+				<h3>Sustainable</h3>
+				<p>We work with coffee producers who practice eco-friendly, sustainable&nbsp;farming</p>
+			</div>
+			<img src="img/sustainable.jpg" alt="" id="img4">
+		</section>
+
+		<div class="call-to-action">
+			<h3>Get Started Today</h3>
+			<a href="signup.html" class="button">Sign Up</a>
+		</div>
+	</main>
+
+
+	<footer>
+		<h6>Follow Us</h6>
+		<div class="social">
+			<a href="https://twitter.com">
+				<img class="twitter" src="img/icon-twitter.svg" width="42" alt="Twitter">
+			</a>
+			<a href="https://www.facebook.com">
+				<img class="facebook" src="img/icon-facebook.svg" width="35" alt="Facebook">
+			</a>
+		</div>
+		<p class="copyright">© Hipstirred LLC</p>
+	</footer>
+
+	<script src="js/gsap.min.js"></script>
+	<script src="js/ScrollTrigger.min.js"></script>
+	<script>
+
+
+
+
+
+		//get alll the setion images -- the img tags that we want to animate 
+		let sectionImgArr = document.querySelectorAll('section img')
+		console.log(sectionImgArr.Length); //4
+		console.log(sectionImgArr[0]); //first div
+		console.log(sectionImgArr); //all 4 div tags
+
+		let sectiontxtArr = document.querySelectorAll('section .text')
+		console.log(sectiontxtArr.Length); //4
+		console.log(sectiontxtArr[0]); //first div
+		console.log(sectiontxtArr);
+
+		for (let i = 0; i < sectionImgArr.length; i++) {
+			let img = sectionImgArr[i];
+			let txt = sectiontxtArr[i];
+
+
+			let xStartPos = 200;
+			if (i % 2 == 0) {
+				xStartPos *= -1;
+			}
+			gsap.from(img, {
+				scrollTrigger: {
+					trigger: img, starts: 'top 85%', end: 'bottom 80%',
+					scrub: 1, markers: false
+				},
+				x: xStartPos, opacity: 0
+			});
+
+			gsap.from(txt, {
+				scrollTrigger: {
+					trigger: txt, starts: 'top 85%', end: 'bottom 80%',
+					scrub: 1, markers: false
+				},
+				x: -xStartPos, opacity: 0
+			});
+
+
+		}
+		// gsap.from('#img1', {
+		// 	scrollTrigger:{trigger:'#img1', start:'top 85%', end:'bottom 80%',
+		// 	scrub:1, markers:true},
+		// 	x:-100, opacity:0});
+
+		// 	gsap.from('#txt1', {
+		// 	scrollTrigger:{trigger:'#txt1', start:'top 85%', end:'bottom 80%',
+		// 	scrub:1, markers:true},
+		// 	x:200, opacity:0});
+
+		// 	gsap.from('#img2', {
+		// 	scrollTrigger:{trigger:'#img2', start:'top 85%', end:'bottom 80%',
+		// 	scrub:1, markers:false},
+		// 	x:-100, opacity:0});
+
+		// 	gsap.from('#txt2', {
+		// 	scrollTrigger:{trigger:'#txt2', start:'top 85%', end:'bottom 80%',
+		// 	scrub:1, markers:false},
+		// 	x:200, opacity:0});
+
+		// 	gsap.from('#img3', {
+		// 	scrollTrigger:{trigger:'#img3', start:'top 85%', end:'bottom 80%',
+		// 	scrub:1, markers:false},
+		// 	x:-100, opacity:0});
+
+		// 	gsap.from('#txt3', {
+		// 	scrollTrigger:{trigger:'#txt3', start:'top 85%', end:'bottom 80%',
+		// 	scrub:1, markers:false},
+		// 	x:200, opacity:0});
+
+		// 	gsap.from('#img4', {
+		// 	scrollTrigger:{trigger:'#img4', start:'top 85%', end:'bottom 80%',
+		// 	scrub:1, markers:false},
+		// 	x:200, opacity:0});
+
+
+		// 	gsap.from('#txt4', {
+		// 	scrollTrigger:{trigger:'#txt4', start:'top 85%', end:'bottom 80%',
+		// 	scrub:1, markers:false},
+		// 	x:-200, opacity:0});
+
+
+
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+*, *::before, *::after { box-sizing: border-box; }
+img { max-width: 100%; vertical-align: middle; border: 0; }
+
+body{
+	text-align: center;
+	color: white;
+	background: url(../img/bg-grid.png) center / cover fixed #222;
+	margin: 0;
+}
+#logo {
+	will-change: transform;
+	width: 100%;
+	max-width: 700px;
+	height: auto;
+}
+#tagline {
+	font-size: 1.8rem;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	opacity: .5;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: auto;
+	padding: 20px;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <style>
+        body {
+            padding: 5px;
+            background-color: #ddd;
+            color: #555;
+            font-family: sans-serif;
+            font-size: 20px;
+            line-height: 5;
+        }
+
+        span {
+            font-size: 24px;
+            border: 1px solid gray;
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Loops in Javascript</h1>
+    <p>A loop is a block of code inside {} that runs again and again as long as a condition is true</p>
+    <p>The </b>for loop</b>is by far the most common loop</p>
+    <p>The </b>for loop</b>evaluates a condition to decide if the code in {} should run.</p>
+    <h2>Fruit Bowl</h2>
+     <p>banana', 'cherry', 'grape', 'kiwi', 'lime', 'mango',
+        'orange', 'papaya', 'pear', 'strawberry', 'tangerine','watermelon'</p>
+
+        <br>
+        <div>
+            <span>apple</span>
+            <span>banana</span>
+            <span>cherry</span>
+            <span>grape</span>
+            <span>kiwi</span>
+            <span>mango</span>
+        </div>
+        <br>
+        <div>
+            <span>orange</span>
+            <span>papaya</span>
+            <span>pear</span>
+            <span>strawberry</span>
+            <span>tangerine</span>
+            <span>watermelon</span>
+        </div>
+
+    <script>
+        //run a for loop 10x, logging a number from 0-9 each time
+       // for loop considers 3 pieces of info inside its():
+       //for(counter): a number variable given a starting value
+       //condition: a boolean comparison that is true or false
+       //incramenter: a change to the value of the counter
+       for(let i=0; i>0; i--) {
+        console.log(i);
+       }
+
+    //loops and arrays go hand in hand
+    //a loop is meant to run multiple items
+    //an array contains multiple items
+    //you can loop an array, item by item
+    let fruits = ['apple', 'banana', 'cherry', 'grape', 'kiwi', 'lime', 'mango',
+        'orange', 'papaya', 'pear', 'strawberry', 'tangerine','watermelon',];
+
+    for(let i = 0; i < fruits.length; i++) {
+        //use % to check if i is even make a jellybean,
+        if(i % 2 ==0) {
+            console.log(i, fruits[i] + ' jellbean');
+        } else { //else "i" is odd, so make a popsicle
+        console.log(i, fruits[i] + ' jellybean');
+    }
+}
+
+    //% modulus operator compares 2 numbers and returns the remainder:
+    // console.log(17 % 5); // 2 (17/5 = 3 remainder 2)
+    // // use x % 2 to detect if x is odd or even
+    // console.log(17 % 2);// 1
+    // console.log(19 % 2);//1
+    // console.log(16 % 2);//0
+    // console.log(18 % 2);//0
+    let fruitSpanTags = document.querySelectorAll('span');
+    console.log(fruitSpanTags); //Nodelist (array of 13 span tags
+    //length: 13
+    //any data structure w a legenth is iterable (loopable)
+    //loop the fruitSpanTags Nodelist, tag by tag
+    for(let t = 0; t < fruitSpanTags.length; t++) {
+     let spanTag = fruitSpanTags[t];
+     if(t% 2 == 0) {
+        spanTag.style.border = "3px solid coral"
+        spanTag.style.fontStyle = "italic"
+        spanTag.style.color = "coral"
+        spanTag.style.textcontent += "jellybean"
+     }
+ 
+     else{
+        spanTag.style.border = "3px solid coral"
+        spanTag.style.fontStyle = "bold"
+        spanTag.style.color = "green"
+        spanTag.style.textcontent += "popsicle"
+     }
+
+    }
+    </script>
+    
+</body>
+</html>

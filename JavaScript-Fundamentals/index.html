@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript Fundamentals</title>
+	
+	<script>
+// alert ('Hello World from alert pop-up!');
+// window browser is the root object in js
+// document (web page) and console are 2 direct descendants
+// (children) of the window
+console.log("Hello World From the console!");
+// a variable is a container that stores a value, like x=5
+//  is the "assignment operator" because it assigns value to a variable
+let myMessage = "Hello from my variable";
+console.log('myMessage'); // oops! wrong
+console.log(myMessage); // correct
+console.log('myMessage', myMessage); // labeled output
+console.log(2+2); // 4(+adds numbers)
+console.log(2+'2'); // 22 (string w + sign concatenates)
+// concatenation: combining strings into one string
+// + is the concatenation operator for string
+// + is the addition operator for math
+//  \'escapes' so that it doesn't break a " string"
+let greeting = 'Hi! I\'m Brian';
+greeting = "Hi! I'm Brian!";
+console.log(greeting);
+let firstName = "Brian";
+let lastName = "McClain";
+greeting = "Hi! My name is " + firstName + " " + lastName + "\Nice to meet you!";
+console.log(greeting);
+// declare a number variable and use that in concatention:
+let highScore = 1200;
+let myScore = 124; // js vars are camelCased by convention but not by strict rule
+let my_myscore = 4234; // using uderscore in var names is a python thing, but 
+// will not break the code if used in js
+let customerTelephoneNumber = 151451345 // too long
+let cTN = 151451345// better but possible too vague
+let custTel = 151451345 // very good
+let username = "Brian123"
+// in js you can use both both strings and numbers in concatention:
+greeting = "welcome back, " +username + " Your High score is " + highScore + ".";
+console.log(greeting);
+// datatypes: every variable has data type, so highScore is a type 'number' 
+// username and greeting are of type 'string'
+console.log('data type of highScore:', typeof(highScore));// number
+console.log('data type of username:', typeof(username));// string
+// boolean is another major data type; value can only be either true or false
+let online = true;
+let loggedIn = false;
+console.log('online:', online);
+
+console.log('loggedIn:', loggedIn);
+// flip a boolean with ! (exclamation mark is a NOT operator in js)
+online = online;
+console.log('online:', online);
+console.log('loggedIn:', loggedIn);
+// undefined is the datatype of any variable that exist but has no value assigned to it
+let player1 ="Guest";
+console.log('data type of player 1:', typeof(player1));// string
+
+let player2; // no value, so datat type is undefined
+console.log('data type of player 2:', typeof(player2));
+// console.log('player3:', player3); // not defined
+
+
+
+	</script>
+
+</head>
+<body>
+	
+</body>
+</html>

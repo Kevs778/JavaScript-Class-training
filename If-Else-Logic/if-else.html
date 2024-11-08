@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>If Else</title>
+</head>
+
+<body>
+	<script>
+		let x = 5; // = assignment operator (it assigns a value)
+		// == comparison operator (it checks if 2 values are equal)
+		// <,>, <=, >= are all bolean operators
+		// they are used to compare 2 values
+		//they return a boolean
+		console.log(x == 3); //false
+		console.log(x == 5); //true
+		console.log(x >3);//true
+		console.log(x !=3); //true
+		//boolean operators are used in conditional logic, that is 
+		// in "if statements"
+		// an if statement code in {}  runs if the conditions in ( is true)
+		if (x > 3) {
+		console.log("it's true!! x really is 5 !!!");
+		}
+		let inStock = true;
+		inStock = !inStock; // flip the boolean to false
+		//  if checking boolean, do not need comparion operator because
+		//it is already a boolean
+
+		if (inStock) {
+			console.log("items is in stock");
+		}
+		// challenge: write an if-else to checkif x is greater than 10
+		// if it is, log "x is greater than 10"
+		//else log "x is less than or equal to 10"
+		let dateTime = new Date ()
+		console.log(dateTime);
+
+		let day = dateTime.getHours();
+		let month = dateTime.getMonth();
+		let fullYear = dateTime.getFullYear();
+		let hour = dateTime.getHours();
+		let minute = dateTime.getMinutes();
+		let second = dateTime.getSecond();
+		console.log(month, day, fullYear);
+		console.log(hour, minute, second);
+
+		// else if: considers a 2nd condition if the first one is false
+		// log a greeting of "Good morning", "Good Afternoon" or "Good Evening" based upon the current hour
+		let timelyGreeting = "Good";
+		if(hour < 12) {
+			timelyGreeting += "Morning!";
+		} else {
+			timelyGreeting += "Evening";
+		}
+		console/log(timelyGreeting);
+
+	</script>
+</body>
+</html>

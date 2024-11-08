@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Product Color Selector</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<main>
+		<div class="col info">
+			<h1>Molded Chair</h1>
+			<p>A modern classic, this molded plastic chair is guaranteed to enhance the look and feel of any home.</p>
+			<p>
+				<span class="price">$89.99</span>
+				<span class="free-shipping">+ FREE Shipping</span>
+			</p>
+			<p class="choose-color">Choose a Color:</p>
+			<div class="color-swatches">
+				<button class="swatch selected" id="beige">Beige</button>
+				<button class="swatch" id="yellow">Yellow</button>
+				<button class="swatch" id="blue">Blue</button>
+				<button class="swatch" id="red">Red</button>
+			</div>
+		</div>
+		<div class="col photo">
+			<img id="product-photo" src="img/chair-beige.jpg">
+		</div>
+	</main>
+	
+	<script>
+		let productPhoto = document.getElementById('product-photo');
+		let colorButton = document.getElementById('red');
+
+		function changeColor() {
+			productPhoto.src = 'img/chair-red.jpg';
+			colorButton.classList.add('selected');
+		}
+		colorButton.addEventListener('click', changeColor);
+	</script>
+</body>
+</html>

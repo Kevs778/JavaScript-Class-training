@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>If Else</title>
+</head>
+<body>
+	<script>
+		let inStock = false;
+		if(inStock == true) {
+			console.log('Item is in stock');
+		}
+		else {
+			console.log('Item is out of stock');
+		}
+
+		let age = 16;
+		if (age < 21) {
+			console.log('Too young to vote');
+		}
+
+		let dateTime = new Date();
+		console.log(dateTime);
+		let hour = dateTime.getHours();
+		let month = dateTime.getMonth();
+		let year = dateTime.getFullYear();
+		console.log( hour + '\n' + month + '\n' + year + '\n' );
+	</script>
+</body>
+</html>

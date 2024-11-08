@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Product Color Selector</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<main>
+		<div class="col info">
+			<h1>Molded Chair</h1>
+			<p>A modern classic, this molded plastic chair is guaranteed to enhance the look and feel of any home.</p>
+			<p>
+				<span class="price">$89.99</span>
+				<span class="free-shipping">+ FREE Shipping</span>
+			</p>
+			<p class="choose-color">Choose a Color:</p>
+			<div class="color-swatches">
+				<button class="swatch selected" id="beige">Beige</button>
+				<button class="swatch" id="yellow">Yellow</button>
+				<button class="swatch" id="blue">Blue</button>
+				<button class="swatch" id="red">Red</button>
+				<!-- <button class="swatch" onclick="displayName()">Display Name</button> -->
+				<button class="swatch" id="display-name-btn">Display Name</button>
+			</div>
+		</div>
+		<div class="col photo">
+			<img id="product-photo" src="img/chair-beige.jpg">
+		</div>
+	</main>
+	
+	<script>
+		
+		// get the product photo img
+		let productPhoto = document.getElementById('product-photo');
+		console.log(productPhoto);
+		//  <img id="product-photo" src="img/chair-beige.jpg">
+		// productPhoto, the img tag, now exist in js as an obeject
+		console.log('productPhoto:', typeof(productPhoto)); // object
+		
+		console.log('productPhoto id:', productPhoto.id);// product-photo
+		console.log('productPhoto:src:', productPhoto.src);
+		// even the css of the elemnt is accessibel via the js object
+		// css properties are all inside the style property, so use doublt-dot syntax:
+		//  SET the css (set means to read and write to a value - that is, change the value)
+		productPhoto.style.border = "2px solid gray";
+		productPhoto.style.padding = "10px 10px 50px 10px";
+		productPhoto.style.backgroundColor = "#effe"; // hyphenated css properties are camelCased in js
+		// hide image
+		productPhoto.style.display ="none";
+		productPhoto.style.display ="inline";
+		//  set the source of the product-photo to a different chair, say the blue one
+		// productPhoto.src = "img/chair-blue.jpg";
+		// get the red button
+		let beigeButton = document.getElementById('beige');
+		let yellowButton = document.getElementById('yellow');
+		let blueButton = document.getElementById('blue');
+		let redButton = document.getElementById('red');
+		
+		// colorButton.classList.add('selected');
+		// function a block of code iside { that runs when called (invoked) by name }
+		// 1.) write the word function: function
+		// 2.) give it a name : function doStuff ()
+		// 3.) add parenthesis: function doStuff()
+		// 4.) add: curly braces: function doStuff {}
+		// 5.) add code inside the curly braces
+		function displayName() {
+			alert ('Hello Brian McClain from the displayName function!');
+		}
+		// 6.) to invoke/ call a function, just write its name w ()
+		// 7.) for user interactivity, have a user-driver event such as button click called a function
+		// instruct the button to call our function
+		// get the display name button and tell the button to call our function
+		// let displayNameBtn = document.getElementById('display-name-btn');
+		// addEventListner() is a method called on an obj thatis to call a func
+		// addEventListner (event, func) takes 2 args, an event that triggers the function and the function name
+		// displayNameBtn.addEventListener('click', displayName);
+		// the 'this' keyword is contextual, meaning it changes based om where it is: in the console, 'this' is the global
+		// window object
+		// inside a function 'this' is ismply the thing that calls the function, which in this case is the button
+		function changeColor(){
+			console.log(this); // <button id="blue", etc
+			console.log(this.id); //blue
+			// console.log(event); //click
+			productPhoto.src = "img/chair-" +this.id + ".jpg";
+			beigeButton.className= 'swatch';
+			yellowButton.className= 'swatch';
+			blueButton.className= 'swatch';
+			redButton.className= 'swatch';
+
+			this.classList.add('selected');
+
+		}
+		// have the color button called the changeColor function
+		beigeButton.addEventListener('mouseover', changeColor);
+		yellowButton.addEventListener('mouseover', changeColor);
+		blueButton.addEventListener('mouseover', changeColor);
+		redButton.addEventListener('mouseover', changeColor);
+
+
+		
+	</script>
+
+
+	
+	
+	
+</body>
+</html>

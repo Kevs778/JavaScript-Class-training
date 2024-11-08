@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NAPS - National Association to Promote Siestas</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<header>
+		<div class="content-wrapper">
+			<img src="img/naps-logo.svg" class="logo" alt="NAPS Logo">
+			<nav>
+				<ul>
+					<li><a href="#">SiestaCon</a></li>
+					<li><a href="#">Press</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="hero">
+		<h1>National Association to Promote Siestas</h1>
+		<p>Promoting siestas for increased health & happiness.</p>
+	</div>
+
+	<main role="main">
+		<div class="content-wrapper">
+			<p id="press-quote">
+				NAPS is by far the most significant cultural force of the decade. — New York Times</p>
+
+			<p>We work hard to make sure your boss, your family, and your friends know that it’s okay for you to take a siesta wherever and whenever you want. We also educate city governments nation-wide about the benefits of sleeping on park benches. Thanks to our efforts, most criminals respect the siesta and will not steal your personal belongings while you take a siesta in a public area. We’re currently working with the U.S. congress to introduce legislation designed to safeguard the jobs of employees who take siestas at work. We also help fund many local chapter organizations. If you’re interested in starting a NAPS chapter in your local community, please <a href="#">contact&nbsp;us</a>.</p>
+
+			<h2>Our History</h2>
+
+			<figure>
+				<img src="img/william-dozer.jpg" alt="William Dozer">
+				<figcaption>William Dozer on that fateful day</figcaption>
+			</figure>
+
+			<p>NAPS began in 1938 when our founder, William Dozer, was fired from his job for taking a siesta during work hours at a Baltimore factory. William realized that siestas are a fundamental human right, so he organized a strike at the factory. The strike was a success and led to a company-wide policy which allowed three siestas per day. After the successful strike, William Dozer started NAPS with the goal of implementing similar policies across the United States. Today NAPS operates out of Washington, D.C. with local chapters in all 50 states, advocating for free sleep in all spheres of life.</p>
+		</div>
+	</main>
+
+	<footer>
+		<p>Copyright © National Association to Promote Siestas</p>
+	</footer>
+
+	<script>
+		// declare an array of cities convention array variables names are puralized
+		// each array item is stored by numeric position number, called index
+		let cities = ['Madrid', 'Paris', 'London'];
+		// individual array items are accessed by index in []
+		console.log(cities);
+		console.log(cities.length) //3
+		// individual array items are accessed by index in []
+		// index of first item in array is always 0
+		console.log(cities[0]);
+		//  index of the last item in array is always array.length-1
+		console.log(cities[cities.length-1]);
+		// add a new city to the end of the array:
+		cities.push('Beijing')
+		console.log(cities)
+		console.log(cities.length)
+		console.log(cities[cities.length-1]) //Beijing
+		//  array.sort( alphabetizes an array of strings)
+		cities.sort();
+		console.log(cities); //['Beijing', 'London', 'Madrid', 'Paris']
+
+		// let cities =quotes declare an array of 7 press quotes (testimonials)
+		let quotes = [
+		'NAPS is by far the most significant cultural force of the decade. <b>— New York Times</b>',
+		'These days sleeping at your desk is not just acceptable, it’s encouraged. <b>— The Atlantic</b>',
+		'NAPS has changed the way people think about sleep, on a grand scale. <b>— Washington Post</b>',
+		'Happiness increased 200% since NAPS began promoting siestas. <b>— National Science Review</b>',
+		'NAPS has ushered in a new era of sleep. <b>— USA Today</b>',
+		'Not surprisingly, more siestas means more productivity. <b>— Wall Street Journal</b>',
+		'NAPS is doing the hard work of helping people get the rest they need. <b>— U.S. News</b>'
+	];
+
+	let pressQuoteP = document.getElementById('press-quote');
+	console.log(pressQuoteP);
+	console.log(pressQuoteP.id);
+	console.log(pressQuoteP.textContent);
+	pressQuoteP.style.backgroundColor ="#eff";
+	pressQuoteP.style.padding = "10px";
+	// textContent does not  render HTML.. user innerHTML for that..
+
+	pressQuoteP.innerHTML = quotes[1];
+	let famousQuote = "To nap";
+	famousQuote += "or not to nap";
+	famousQuote += "isn't even a question";
+	famousQuote += "<b> William Sleepspeare</b>";
+
+	console.log(famousQuote);
+	console.log(famousQuote);
+	console.log(famousQuote);
+	let price = 86;
+	price += 9
+	console.log(price);
+	console.innerHTML = quotes[quotes.length-1];
+
+	let r =Math.random(); //0.9418705702097199
+	console.log('r:',r)
+	console.log(' Math.floor( r* quotes.length):', Math.floor(r * quotes.legent));
+
+	let randIndex = Math.floor(r*quotes.length)
+	console.log('randIndex:', randIndex);
+	pressQuoteP.innerHTML = quotes [randIndex]
+
+
+	</script>
+
+</body>
+</html>

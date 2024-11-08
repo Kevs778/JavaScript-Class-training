@@ -1,0 +1,98 @@
+*, *::before, *::after { box-sizing: border-box; }
+body {
+	font-family: 'Asap', Arial, sans-serif;
+	background-color: #555;
+	color: #fff;
+	margin: 0;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+}
+h1, h2 {
+	font-weight: normal;
+	margin: 0;
+	line-height: 1;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#banner {
+	visibility: hidden;
+	overflow: hidden;
+	display: block;
+	position: relative;
+	width: 300px;
+	height: 250px;
+	background: #fff;
+}
+.panel {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#panel1 {
+	background: #a02600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+#panel2 {
+	top: 260px;
+	background: url(../img/burger.jpg) top center;
+	background-size: cover;
+}
+#panel1 h1 {
+	font-size: 40px;
+}
+#panel2 h2 {
+	position: absolute;
+	top: 188px;
+	width: 100%;
+	font-size: 22px;
+	text-align: center;
+	padding: 20px;
+	background: #a02600;
+}
+#panel3 {
+	top: 520px;
+}
+#panel3 #info {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 12px;
+	padding-top: 15px;
+	padding-bottom: 18px;
+	background: #a02600;
+}
+#panel3 h1 {
+	font-size: 34px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+#panel3 li {
+	position: relative;
+	margin-top: 10px;
+	color: #ffa488;
+}
+#panel3 #order-now {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	background: #ffc600;
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 9px 12px;
+	border-radius: 10px;
+	border: 4px solid transparent;
+}
+#panel3 #order-now:hover {
+	background: #ffaa00;
+	border-color: #fff;
+}
